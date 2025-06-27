@@ -5,10 +5,28 @@ import members from "../data/members";
 function Main() {
   const [selectedType, setSelectedType] = useState("전체");
 
-  // 모든 타입 모음 (중복 제거)
-  const allTypes = Array.from(new Set(members.flatMap((m) => m.type)));
+  const HIDDEN_TYPES = [
+    "공지알리미",
+    "친절왕",
+    "카리스마",
+    "명강의",
+    "백업요정",
+    "엘리트",
+    "억대연봉",
+    "수염",
+    "친근함",
+  ];
 
-  // 필터링된 멤버 리스트
+  // 모든 타입 중 버튼에 보여줄 것만 추출 (중복 제거 + 제외)
+  const allTypes = Array.from(
+    new Set(
+      members
+        .flatMap((m) => m.type)
+        .filter((t) => !HIDDEN_TYPES.some((hidden) => t.includes(hidden)))
+    )
+  );
+
+  // 필터링
   const filteredMembers =
     selectedType === "전체"
       ? members
@@ -20,7 +38,7 @@ function Main() {
 
   return (
     <div className="max-w-screen-xl mx-auto p-6">
-      {/* 타입 필터 버튼들 */}
+      {/* 타입 필터 버튼 */}
       <div className="flex flex-wrap gap-2 mb-6 justify-center">
         <button
           onClick={() => setSelectedType("전체")}
@@ -47,7 +65,7 @@ function Main() {
         ))}
       </div>
 
-      {/* 카드 리스트 */}
+      {/* 카드 목록 */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {filteredMembers.map((member) => (
           <Card key={member.id} member={member} />
