@@ -4,7 +4,7 @@ export const members = [
     name: "FE/11 김승원",
     description: "프론트엔드를 불태우는 열정의 개발자",
     image: "/character/seungwon.png",
-    type: ["🌹열정반", "조장"],
+    type: ["🌹열정반", "👑조장"],
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ export const members = [
     name: "FE/11 이재현",
     description: "프론트엔드를 불태우는 열정의 개발자",
     image: "/character/Jaehyun.png",
-    type: ["✨심화반", "조장"],
+    type: ["✨심화반", "👑조장"],
   },
   {
     id: 6,
@@ -46,7 +46,7 @@ export const members = [
     name: "FE/11 이명우",
     description: "프론트엔드를 불태우는 열정의 개발자",
     image: "",
-    type: ["✨심화반", "조장"],
+    type: ["✨심화반", "👑조장"],
   },
   {
     id: 8,
@@ -88,7 +88,7 @@ export const members = [
     name: "FE/11 함서연",
     description: "프론트엔드를 불태우는 열정의 개발자",
     image: "/character/Seoyeon.png",
-    type: ["✨심화반", "조장"],
+    type: ["✨심화반", "👑조장"],
   },
   {
     id: 14,
@@ -137,7 +137,7 @@ export const members = [
     name: "FE/11 이재건",
     description: "프론트엔드를 불태우는 열정의 개발자",
     image: "/character/Jaegun.png",
-    type: ["✨심화반", "조장"],
+    type: ["✨심화반", "👑조장"],
   },
   {
     id: 21,
@@ -186,28 +186,28 @@ export const members = [
     name: "FE/11 조민지",
     description: "프론트엔드를 불태우는 열정의 개발자",
     image: "/character/Minji.png",
-    type: ["✨심화반", "조장"],
+    type: ["✨심화반", "👑조장"],
   },
   {
     id: 28,
     name: "여진 조교님",
     description: "11기 친절한 최고 조교",
     image: "/character/Yeojin.png",
-    type: ["조교", "엘리트", "코딩고수"],
+    type: ["👩‍🏫조교", "🥇엘리트", "🧑‍💻코딩고수"],
   },
   {
     id: 29,
     name: "하연 매니저님",
     description: "프론트엔드를 불태우는 열정의 개발자",
     image: "/character/Hayeon.png",
-    type: ["매니저", "엘리트", "코딩고수"],
+    type: ["👩‍💼매니저", "🥇엘리트", "🧑‍💻코딩고수"],
   },
   {
     id: 30,
     name: "성구 코치님",
     description: "프론트엔드를 불태우는 열정의 개발자",
     image: "/character/Sunggu.png",
-    type: ["코치", "엘리트", "코딩고수"],
+    type: ["🏋️코치", "🥇엘리트", "🧑‍💻코딩고수"],
   },
 ];
 
