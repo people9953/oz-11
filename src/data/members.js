@@ -210,3 +210,5 @@ export const members = [
     type: ["코치", "엘리트", "코딩고수"],
   },
 ];
+
+export default members;
