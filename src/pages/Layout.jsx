@@ -16,19 +16,16 @@ function Layout() {
     }
   }, 300);
 
-  // debounce 적용
   useEffect(() => {
     debouncedSearch(input);
     return () => debouncedSearch.cancel();
   }, [input]);
 
-  // 경로 변경 시 검색창 닫기
   useEffect(() => {
     setIsSearchOpen(false);
     setInput("");
   }, [location.pathname]);
 
-  // 외부 클릭 시 검색창 닫기
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (searchRef.current && !searchRef.current.contains(e.target)) {
@@ -39,8 +36,16 @@ function Layout() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const handleBack = () => {
+    if (window.history.length > 1) {
+      navigate(-1);
+    } else {
+      navigate("/");
+    }
+  };
+
   return (
-    <div>
+    <div className="relative min-h-screen">
       {/* 상단 네비게이션 바 */}
       <header className="bg-white shadow-md">
         <div className="max-w-screen-xl mx-auto flex justify-between items-center p-4 relative">
@@ -53,7 +58,7 @@ function Layout() {
             베스트 일레븐
           </motion.h1>
 
-          {/* FE 버튼 */}
+          {/* FE (검색창 토글) */}
           <motion.div
             onClick={() => setIsSearchOpen((prev) => !prev)}
             whileHover={{ scale: 1.1 }}
@@ -63,7 +68,7 @@ function Layout() {
           </motion.div>
 
           {/* 로그인/회원가입 */}
-          <div className="flex gap-2 mr-4">
+          <div className="flex gap-3 mr-4">
             <button className="text-sm text-gray-600 hover:text-blue-600 font-medium">
               로그인
             </button>
@@ -97,10 +102,18 @@ function Layout() {
         </AnimatePresence>
       </header>
 
-      {/* 본문 영역 */}
+      {/* 본문 내용 */}
       <main className="max-w-screen-xl mx-auto p-4">
         <Outlet />
       </main>
+
+      {/* 고정 뒤로가기 버튼 */}
+      <button
+        onClick={handleBack}
+        className="fixed bottom-6 right-6 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition"
+      >
+        ← 뒤로가기
+      </button>
     </div>
   );
 }

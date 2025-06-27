@@ -4,7 +4,7 @@ function Home() {
   const navigate = useNavigate();
 
   const pages = [
-    { name: "카드 보기", path: "/cards" },
+    { name: "베스트일레븐 멤버", path: "/cards" },
     { name: "예정 기능 1", path: "/plan1" },
     { name: "예정 기능 2", path: "/plan2" },
     { name: "예정 기능 3", path: "/plan3" },
