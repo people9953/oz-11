@@ -220,7 +220,7 @@ export const members = [
     name: "여진 조교님",
     description: "6기출신 최고 엘리트 조교",
     image: "/character/Yeojin.png",
-    type: ["👩‍🏫조교", "🧚‍♀️백업요정", "😁친근함", "🥇엘리트"],
+    type: ["🧑‍💻조교", "🧚‍♀️백업요정", "😁친근함", "🥇엘리트"],
   },
   {
     id: 29,
@@ -276,7 +276,7 @@ export const members = [
     name: "고재성 조교님",
     description: "10기 조교",
     image: "/character/Jaesung.png",
-    type: ["👨‍🏫조교", "🥇엘리트"],
+    type: ["🧑‍💻조교", "🥇엘리트"],
   },
   {
     id: 37,
