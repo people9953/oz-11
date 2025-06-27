@@ -191,7 +191,7 @@ export const members = [
   {
     id: 28,
     name: "여진 조교님",
-    description: "프론트엔드를 불태우는 열정의 개발자",
+    description: "11기 친절한 최고 조교",
     image: "/character/Yeojin.png",
     type: ["조교", "엘리트", "코딩고수"],
   },
