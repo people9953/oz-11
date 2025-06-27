@@ -8,12 +8,13 @@ function Card({ member }) {
   return (
     <div
       onClick={() => navigate(`/detail/${member.id}`)}
-      className="bg-white rounded-xl shadow-md p-4 hover:scale-105 transition duration-200 cursor-pointer"
+      className="bg-white max-w-xs w-full mx-auto rounded-xl shadow-md p-4 hover:scale-105 transition duration-200 cursor-pointer"
     >
       <img
         src={member.image}
         alt={member.name}
-        className="w-full h-40 object-cover rounded-md"
+        className="w-full h-40 md:h-48 lg:h-56 object-cover rounded-md"
+        style={{ imageRendering: "pixelated" }}
       />
       <h2 className="text-lg font-bold mt-3">{member.name}</h2>
       <p className="text-sm text-gray-600">{member.description}</p>
