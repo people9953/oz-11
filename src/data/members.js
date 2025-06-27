@@ -185,7 +185,7 @@ export const members = [
     id: 27,
     name: "FE/11 조민지",
     description: "프론트엔드를 불태우는 열정의 개발자",
-    image: "/character/",
+    image: "/character/Minji.png",
     type: ["✨심화반", "조장"],
   },
   {

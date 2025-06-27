@@ -1,62 +1,103 @@
-import { Link, Outlet } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { Outlet, useNavigate, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import debounce from "lodash/debounce";
 
 function Layout() {
-  const [showSearch, setShowSearch] = useState(false);
-  const [query, setQuery] = useState("");
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [input, setInput] = useState("");
+  const searchRef = useRef(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const handleSearchToggle = () => {
-    setShowSearch((prev) => !prev);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (query.trim()) {
-      window.location.href = `/search?q=${query.trim()}`;
+  const debouncedSearch = debounce((value) => {
+    if (value.trim()) {
+      navigate(`/search?q=${value.trim()}`);
     }
-  };
+  }, 300);
+
+  // debounce 적용
+  useEffect(() => {
+    debouncedSearch(input);
+    return () => debouncedSearch.cancel();
+  }, [input]);
+
+  // 경로 변경 시 검색창 닫기
+  useEffect(() => {
+    setIsSearchOpen(false);
+    setInput("");
+  }, [location.pathname]);
+
+  // 외부 클릭 시 검색창 닫기
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (searchRef.current && !searchRef.current.contains(e.target)) {
+        setIsSearchOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <div>
-      {/* 상단바 */}
+      {/* 상단 네비게이션 바 */}
       <header className="bg-white shadow-md">
-        <div className="max-w-screen-xl mx-auto flex justify-between items-center p-4">
-          <Link to="/" className="text-blue-600 font-bold text-xl">
+        <div className="max-w-screen-xl mx-auto flex justify-between items-center p-4 relative">
+          {/* 홈 버튼 */}
+          <motion.h1
+            onClick={() => navigate("/")}
+            whileHover={{ scale: 1.1 }}
+            className="text-2xl font-bold text-blue-600 cursor-pointer hover:text-blue-800 ml-4"
+          >
             베스트 일레븐
-          </Link>
+          </motion.h1>
 
-          <button
-            onClick={handleSearchToggle}
-            className="text-lg text-gray-800 font-semibold"
+          {/* FE 버튼 */}
+          <motion.div
+            onClick={() => setIsSearchOpen((prev) => !prev)}
+            whileHover={{ scale: 1.1 }}
+            className="text-xl font-semibold text-blue-500 cursor-pointer hover:text-blue-700 absolute left-1/2 -translate-x-1/2"
           >
             FE
-          </button>
+          </motion.div>
 
-          <div className="space-x-4">
-            <button className="text-sm text-gray-600 hover:underline">
+          {/* 로그인/회원가입 */}
+          <div className="flex gap-2 mr-4">
+            <button className="text-sm text-gray-600 hover:text-blue-600 font-medium">
               로그인
             </button>
-            <button className="text-sm text-gray-600 hover:underline">
+            <button className="text-sm text-gray-600 hover:text-blue-600 font-medium">
               회원가입
             </button>
           </div>
         </div>
 
         {/* 검색창 */}
-        {showSearch && (
-          <form onSubmit={handleSubmit} className="max-w-screen-xl mx-auto p-4">
-            <input
-              type="text"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="이름으로 검색하세요"
-              className="w-full border border-gray-300 rounded p-2"
-            />
-          </form>
-        )}
+        <AnimatePresence>
+          {isSearchOpen && (
+            <motion.div
+              key="search"
+              initial={{ opacity: 0, scaleX: 0 }}
+              animate={{ opacity: 1, scaleX: 1 }}
+              exit={{ opacity: 0, scaleX: 0 }}
+              transition={{ duration: 0.3 }}
+              className="origin-center mt-4 w-full max-w-sm mx-auto"
+              ref={searchRef}
+            >
+              <input
+                type="text"
+                placeholder="이름으로 검색"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                className="w-full border border-gray-300 rounded-md px-4 py-2 text-sm shadow-md"
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </header>
 
-      {/* 본문 */}
+      {/* 본문 영역 */}
       <main className="max-w-screen-xl mx-auto p-4">
         <Outlet />
       </main>
