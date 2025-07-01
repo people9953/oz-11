@@ -5,6 +5,7 @@ export const members = [
     description: "프론트엔드에 흥미를 느껴 도전하다",
     image: "/character/seungwon.png",
     type: ["🌹열정반", "👑조장"],
+    github: "https://github.com/dirage1",
   },
   {
     id: 2,
@@ -13,6 +14,7 @@ export const members = [
     image: "/character/Hyejin.png",
     type: ["🌹열정반"],
     hobby: "독서",
+    github: "https://github.com/hyejinjang97",
   },
   {
     id: 3,
@@ -21,6 +23,7 @@ export const members = [
     image: "/character/Eunbin.png",
     type: ["🌹열정반"],
     hobby: "게임",
+    github: "https://github.com/bin00125",
   },
   {
     id: 4,
@@ -28,6 +31,7 @@ export const members = [
     description: "프론트엔드를 불태우는 열정의 개발자",
     image: "/character/guyeong.png",
     type: ["🍀새싹반"],
+    github: "",
   },
   {
     id: 5,
@@ -36,6 +40,7 @@ export const members = [
     image: "/character/Jaehyun.png",
     type: ["✨심화반", "👑조장"],
     hobby: "베이스 기타연주",
+    github: "https://github.com/JaeHyunLee123",
   },
   {
     id: 6,
@@ -44,13 +49,15 @@ export const members = [
     image: "/character/Dongjun.png",
     type: ["🌹열정반"],
     hobby: "운동",
+    github: "https://github.com/junjunjun13",
   },
   {
     id: 7,
     name: "FE/11 이명우",
     description: "재능이 넘처흐르는 6년차개발자",
-    image: "",
+    image: "/character/MyungWoo.png",
     type: ["✨심화반", "👑조장"],
+    github: "https://github.com/wrongstory",
   },
   {
     id: 8,
@@ -59,6 +66,7 @@ export const members = [
     image: "/character/Jaeeun.png",
     type: ["🌹열정반"],
     hobby: "뜨개질",
+    github: "https://github.com/Jaeeun0723",
   },
   {
     id: 9,
@@ -67,6 +75,7 @@ export const members = [
     image: "/character/Yoona.png",
     type: ["🌹열정반"],
     hobby: "야구관람,영화,산책",
+    github: "https://github.com/Yunahha",
   },
   {
     id: 10,
@@ -75,6 +84,7 @@ export const members = [
     image: "/character/Dabin.png",
     type: ["🍀새싹반"],
     hobby: "영화,애니 시청",
+    github: "",
   },
   {
     id: 11,
@@ -83,6 +93,7 @@ export const members = [
     image: "/character/Jaemin.png",
     type: ["✨심화반"],
     hobby: "게임",
+    github: "https://github.com/jamminP",
   },
   {
     id: 12,
@@ -90,6 +101,7 @@ export const members = [
     description: "누구나 편리하게 사용할 수 있는 웹을 만들자",
     image: "/character/Minje.png",
     type: ["🍀새싹반"],
+    github: "https://github.com/minjekim64",
   },
   {
     id: 13,
@@ -98,6 +110,7 @@ export const members = [
     image: "/character/Seoyeon.png",
     type: ["✨심화반", "👑조장"],
     hobby: "식도락여행,애니,영화,게임",
+    github: "https://github.com/OZ-Coding-School/oz_react_mini_11/pull/18",
   },
   {
     id: 14,
@@ -107,6 +120,7 @@ export const members = [
     type: ["🍀새싹반"],
     mbti: "ESFJ",
     hobby: "독서",
+    github: "https://github.com/jjub0217",
   },
   {
     id: 15,
@@ -115,6 +129,7 @@ export const members = [
     image: "/character/Jooyoung.png",
     type: ["✨심화반"],
     hobby: "게임,사진",
+    github: "https://github.com/wnduddlekd",
   },
   {
     id: 16,
@@ -123,6 +138,7 @@ export const members = [
     image: "/character/Junhak.png",
     type: ["🍀새싹반"],
     hobby: "노래듣기,영화감상",
+    github: "",
   },
   {
     id: 17,
@@ -131,6 +147,7 @@ export const members = [
     image: "/character/Minchang.png",
     type: ["🌹열정반"],
     hobby: "독서,요리,음악감상",
+    github: "https://github.com/rlaalsckd4",
   },
   {
     id: 18,
@@ -139,6 +156,7 @@ export const members = [
     image: "/character/Junkyu.png",
     type: ["🍀새싹반"],
     hobby: "고기",
+    github: "https://github.com/nbc7799",
   },
   {
     id: 19,
@@ -148,6 +166,7 @@ export const members = [
     type: ["🌹열정반"],
     mbti: "ISFP",
     hobby: "게임,야구관람",
+    github: "https://github.com/people9953",
   },
   {
     id: 20,
@@ -156,6 +175,7 @@ export const members = [
     image: "/character/Jaegun.png",
     type: ["✨심화반", "👑조장"],
     hobby: "게임",
+    github: "https://github.com/gunysunny",
   },
   {
     id: 21,
@@ -165,7 +185,7 @@ export const members = [
     type: ["🌹열정반"],
     mbti: "ISFP",
     hobby: "운동",
-    quote: "코딩고수가 되자",
+    github: "https://github.com/Jungmaba",
   },
   {
     id: 22,
@@ -175,6 +195,7 @@ export const members = [
     type: ["🍀새싹반"],
     mbti: "ISFJ",
     hobby: "여행,영상제작,디지털드로잉",
+    github: "https://github.com/ElviaChoi",
   },
   {
     id: 23,
@@ -183,6 +204,7 @@ export const members = [
     image: "/character/Hyunjoong.png",
     type: ["🍀새싹반"],
     hobby: "산책",
+    github: "",
   },
   {
     id: 24,
@@ -191,6 +213,7 @@ export const members = [
     image: "/character/EunKyu.png",
     type: ["🍀새싹반"],
     hobby: "게임,운동",
+    github: "",
   },
   {
     id: 25,
@@ -198,6 +221,7 @@ export const members = [
     description: "프론트엔드를 불태우는 열정의 개발자",
     image: "/character/HeeYoung.png",
     type: ["🍀새싹반"],
+    github: "https://github.com/heyoung0218",
   },
   {
     id: 26,
@@ -206,6 +230,7 @@ export const members = [
     image: "/character/SeoYoung.png",
     type: ["🍀새싹반"],
     hobby: "게임,넷플릭스",
+    github: "https://github.com/sysysysyb",
   },
   {
     id: 27,
@@ -214,6 +239,7 @@ export const members = [
     image: "/character/Minji.png",
     type: ["✨심화반", "👑조장"],
     hobby: "공연,전시회 구경",
+    github: "https://github.com/minji105",
   },
   {
     id: 28,
@@ -221,6 +247,7 @@ export const members = [
     description: "6기출신 최고 엘리트 조교",
     image: "/character/Yeojin.png",
     type: ["🧑‍💻조교", "🧚‍♀️백업요정", "😁친근함", "🥇엘리트"],
+    github: "https://github.com/Kwonyeojiny",
   },
   {
     id: 29,
@@ -285,6 +312,7 @@ export const members = [
     image: "/character/KwonYoung.png",
     type: ["🌹열정반"],
     hobby: "헬스,여친구하기,술친구",
+    github: "",
   },
 ];
 
